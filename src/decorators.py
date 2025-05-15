@@ -13,7 +13,7 @@ def decorator_record_file(file_name):
     def wrapper(func):
         @wraps(func)
         def inner(*args, **kwargs):
-            df = func(*args, **kwargs
+            df = func(*args, **kwargs)
             logger.info('Проверка: являются ли данные датафреймом')
             if isinstance(df, pd.DataFrame):
                 logger.info('Запись отчёта в файл')
