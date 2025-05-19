@@ -1,5 +1,6 @@
 from src.services import get_profitable_cashback_categories
 
+
 def test_get_profitable_cashback_categories(operations_list_valid, result_cashback_categories):
     result = get_profitable_cashback_categories(operations_list_valid, "2022", "04")
     assert result == result_cashback_categories

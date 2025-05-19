@@ -1,6 +1,8 @@
 import json
 from unittest.mock import patch
+
 import pytest
+
 from src.external_api import get_currency_rate, get_stock_price
 
 

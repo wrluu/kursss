@@ -1,6 +1,7 @@
 import json
 import logging
 from datetime import datetime
+
 from logging_config import setup_logging
 from settings import EXCEL_PATH, JSON_PATH
 from src.external_api import get_currency_rate, get_stock_price

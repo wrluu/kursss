@@ -1,5 +1,7 @@
 import pytest
+
 from src.views import get_card_info, get_top_transactions, greetings, sort_by_date
+
 
 @pytest.mark.parametrize(
     "input_time, expected_greet",

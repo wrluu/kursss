@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture
 def operations_from_excel():
     return {
