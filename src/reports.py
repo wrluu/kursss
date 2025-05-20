@@ -34,10 +34,11 @@ def spending_by_category(transactions: pd.DataFrame, category: str, date: Option
         transactions["Дата платежа"] = pd.to_datetime(transactions["Дата платежа"], format="%d.%m.%Y")
 
         filtered_transactions = transactions[
-            (transactions["Дата платежа"] >= start_date) &
-            (transactions["Дата платежа"] <= stop_date) &
-            (transactions["Категория"] == category) &
-            (transactions["Сумма операции"] < 0)]
+            ((transactions["Дата платежа"] >= start_date)
+             & (transactions["Дата платежа"] <= stop_date)
+             & (transactions["Категория"] == category)
+             & (transactions["Сумма операции"] < 0))
+        ]
 
         total_spending = filtered_transactions["Сумма операции"].abs().sum()
         result = pd.DataFrame({
